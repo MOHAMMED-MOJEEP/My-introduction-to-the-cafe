@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="كافيه باريس - تجربة فرنسية أصيلة في قلب المدينة. استمتع بأجود أنواع القهوة والحلويات الفرنسية.">
+    <title>كافيه باريس | تجربة فرنسية أصيلة</title>
+    
+    <!-- تحسين الأداء: تحميل مسبق للخطوط والصور الأساسية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- ربط ملف التنسيق CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- أيقونة الموقع -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- شاشة التحميل (Loading Screen) لتحسين تجربة المستخدم -->
+    <div class="loading-screen" id="loadingScreen" aria-hidden="true">
+        <div class="loader"></div>
+    </div>
+
+    <!-- الهيدر والتنقل (Header & Navigation) -->
+    <header id="header">
+        <nav class="container">
+            <a href="#home" class="logo" aria-label="الرئيسية">
+                <span class="logo-text">كافيه<span> باريس</span></span>
+            </a>
+            
+            <!-- قائمة التنقل متجاوبة وتدعم الكيبورد -->
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="#home" role="menuitem" tabindex="0">الرئيسية</a></li>
+                <li role="none"><a href="#menu" role="menuitem" tabindex="0">القائمة</a></li>
+                <li role="none"><a href="#about" role="menuitem" tabindex="0">من نحن</a></li>
+                <li role="none"><a href="#contact" role="menuitem" tabindex="0">اتصل بنا</a></li>
+            </ul>
+            
+            <!-- زر القائمة للجوال -->
+            <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- قسم الهيرو (Hero Section) مع خلفية فيديو -->
+        <section class="hero-section" id="home">
+            <div class="video-container">
+                <!-- فيديو الخلفية - تم استخدام صورة احتياطية في حال فشل تحميل الفيديو -->
+                <video autoplay muted loop playsinline id="heroVideo" poster="images/hero_image.png">
+                    <source src="videos/hero_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+            
+            <div class="hero-content container reveal">
+                <h1 class="hero-title">مرحباً بكم في كافيه باريس</h1>
+                <p class="hero-subtitle">حيث تلتقي الأصالة الفرنسية بالقهوة الفاخرة</p>
+                <div class="hero-btns">
+                    <a href="#menu" class="cta-button primary">اكتشف القائمة</a>
+                    <a href="#contact" class="cta-button secondary">احجز طاولتك</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم القائمة المميزة (Featured Menu) -->
+        <section class="portfolio-section" id="menu">
+            <div class="section-header container reveal">
+                <h2 class="section-title">قائمتنا المميزة</h2>
+                <p class="section-subtitle">تذوق تشكيلة مختارة من الحلويات والمشروبات الفرنسية الأصيلة التي تأخذك في رحلة إلى قلب باريس</p>
+            </div>
+
+            <div class="menu-grid container reveal">
+                <!-- صنف 1: كرواسون -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="images/croissant.png" alt="كرواسون زبدة فرنسي" loading="lazy">
+                    </div>
+                    <div class="menu-info">
+                        <h3>كرواسون الزبدة</h3>
+                        <p>كرواسون فرنسي كلاسيكي محضر بالزبدة الطبيعية، هش ومقرمش من الخارج وطري من الداخل.</p>
+                        <span class="price">15 ر.ي</span>
+                    </div>
+                </div>
+
+                <!-- صنف 2: ماكرون -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="images/macarons.png" alt="ماكرون فرنسي متنوع" loading="lazy">
+                    </div>
+                    <div class="menu-info">
+                        <h3>تشكيلة الماكرون</h3>
+                        <p>قطع الماكرون الملونة بنكهات فرنسية متنوعة: لافندر، فستق، وتوت علّيق.</p>
+                        <span class="price">25 ر.ي</span>
+                    </div>
+                </div>
+
+                <!-- صنف 3: إكلير -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="images/eclair.png" alt="إكلير الشوكولاتة" loading="lazy">
+                    </div>
+                    <div class="menu-info">
+                        <h3>إكلير الشوكولاتة</h3>
+                        <p>عجينة الشو الهشة محشوة بكريمة الفانيليا الغنية ومغطاة بطبقة من الشوكولاتة الداكنة.</p>
+                        <span class="price">18 ر.ي</span>
+                    </div>
+                </div>
+
+                <!-- صنف 4: لاتيه -->
+                <div class="menu-item">
+                    <div class="menu-item-tag">الأكثر طلباً</div>
+                    <div class="menu-image">
+                        <img src="images/latte.png" alt="كافيه أو ليه فرنسي" loading="lazy">
+                    </div>
+                    <div class="menu-info">
+                        <h3>كافيه أو ليه</h3>
+                        <p>قهوة فرنسية كلاسيكية محضرة من أجود أنواع البن مع الحليب المبخر وفن اللاتيه.</p>
+                        <span class="price">12 ر.ي</span>
+                    </div>
+                </div>
+
+                <!-- صنف 5: شوكولاتة ساخنة -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="images/hot_chocolate.png" alt="شوكولاتة باريسية ساخنة" loading="lazy">
+                    </div>
+                    <div class="menu-info">
+                        <h3>شوكولاتة باريسية</h3>
+                        <p>شوكولاتة ساخنة غنية وكثيفة على الطريقة الباريسية، تقدم مع الكريمة المخفوقة.</p>
+                        <span class="price">20 ر.ي</span>
+                    </div>
+                </div>
+
+                <!-- صنف 6: كريم بروليه -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="images/creme_brulee.png" alt="كريم بروليه" loading="lazy">
+                    </div>
+                    <div class="menu-info">
+                        <h3>كريم بروليه</h3>
+                        <p>حلوى الكاسترد الفرنسية الشهيرة بطبقة السكر المكرمل المقرمشة.</p>
+                        <span class="price">22 ر.ي</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- قسم من نحن (About Section) -->
+        <section class="about-section" id="about">
+            <div class="about-container container reveal">
+                <div class="about-image">
+                    <img src="images/hero_image.png" alt="داخل كافيه باريس" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <h2>قصة كافيه باريس</h2>
+                    <p>بدأت رحلتنا من شغفنا بنقل الثقافة الفرنسية العريقة في تحضير القهوة والحلويات إلى قلب مدينتكم. نحن نؤمن أن القهوة ليست مجرد مشروب، بل هي تجربة متكاملة من الطعم والأجواء.</p>
+                    <p>نستخدم أجود أنواع البن المستورد ونحضر حلوياتنا يومياً بأيدي خبراء في المعجنات الفرنسية لضمان أعلى مستويات الجودة والطعم الأصيل.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">نوع قهوة</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">صنف حلويات</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">جودة فرنسية</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التواصل (Contact Section) -->
+        <section class="contact-section" id="contact">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2 class="section-title">تواصل معنا</h2>
+                    <p class="section-subtitle">نحن هنا لخدمتكم، تواصلوا معنا للحجز أو الاستفسار</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <h3>العنوان</h3>
+                            <p>اليمن/ ثنعاء </p>
+                        </div>
+                        <div class="info-item">
+                            <h3>ساعات العمل</h3>
+                            <p>يومياً: 7:00 صباحاً - 12:00 منتصف الليل</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>الهاتف</h3>
+                            <p>337 807 782 967+</p>
+                        </div>
+                    </div>
+                    
+                    <!-- نموذج تواصل آمن -->
+                    <form class="contact-form" id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="الاسم الكامل" required aria-label="الاسم الكامل">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="البريد الإلكتروني" required aria-label="البريد الإلكتروني">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="رسالتك" rows="5" required aria-label="رسالتك"></textarea>
+                        </div>
+                        <!-- حماية CSRF وهمية للتوضيح -->
+                        <input type="hidden" name="token" value="secure_token_123">
+                        <button type="submit" class="cta-button primary">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- الفوتر (Footer) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">كافيه باريس</div>
+                <p>&copy; 2026 جميع الحقوق محفوظة لكافيه باريس</p>
+                <div class="social-links">
+                    <a href="#" aria-label="انستقرام">Instagram</a>
+                    <a href="#" aria-label="تويتر">Twitter</a>
+                    <a href="#" aria-label="فيسبوك">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ملفات الجافا سكريبت -->
+    <script src="script.js"></script>
+</body>
+</html>
